@@ -10,6 +10,7 @@ body {
     align-items: center;
     justify-content: center;
 }
+
 .color{
     background-color: #EA4D4C;
 }
@@ -66,12 +67,14 @@ button {
     height: 150px;
     text-align: center;
     display: inline-block;
+    border-radius: 15px;
 }
 .currentPlayer2Div {
     width: 200px;
     height: 150px;
     text-align: center;
     display: inline-block;
+    border-radius: 15px;
 }
 .currentScoreNumber1 {
     color: #fff;
@@ -86,6 +89,14 @@ button {
 .buttonFont {
     font-size: 2rem;
 }
+.buttonNewGame:hover, .buttonRollDice:hover, .buttonHold:hover {
+    cursor: pointer;
+}
+.buttonNewGame:hover, .buttonRollDice:hover, .buttonHold:hover {
+    cursor: pointer;
+    transition: transform .5s;
+    transform: scale(1.5);
+}
 
 /*Display position*/
 .buttonNewGameDiv {
@@ -96,6 +107,8 @@ button {
     position: relative;
     z-index: 1;
 }
+
+
 .players {
     display: flex;
     justify-content: space-around;

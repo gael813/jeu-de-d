@@ -12,15 +12,15 @@
     </head>
     <body>
         <div class="wallpapperDiv">
-            <div class="divided">    
+            <div class="divided" id="divided">    
             </div>
             <div class="buttonNewGameDiv">                              
                 <button class="buttonNewGame buttonFont"><img class="ico" src="img/add.svg" alt="icon added">NEW GAME</button>
             </div>            
             <div class="players">
                 <div class="totalPlayer1Div">
-                    <h1 class="totalPlayer1 fontPlayers">Player 1 <span class="dotSelectedPlayer1"> </span></h1>
-                    <p class="totalScoreNumber">43</p>
+                    <h1 class="totalPlayer1 fontPlayers">Player 1 <span class="dotSelectedPlayer1" id="dotSelectedPlayer1"> </span></h1>
+                    <p class="totalScoreNumber" id="totalScorePlayer1">0</p>
                 </div>
                 <div class="allDice">
                     <div class="dice first-face">
@@ -74,14 +74,14 @@
                     </div>
                 </div>
                 <div class="totalPlayer2Div">
-                    <h1 class="totalPlayer2 fontPlayers">Player 2 <span class="dotSelectedPlayer1"> </span></h1>
-                    <p class="totalScoreNumber">72</p>
+                    <h1 class="totalPlayer2 fontPlayers">Player 2 <span class="dotSelectedPlayer2" id="dotSelectedPlayer2"> </span></h1>
+                    <p class="totalScoreNumber">0</p>
                 </div>    
             </div>  
             <div class="footer">                              
-                <div class="currentPlayer1Div color">
+                <div class="currentPlayer1Div color" id="currentPlayer1Div">
                     <h2 class="currentScore1">Current</h2>
-                    <p class="currentScoreNumber1">11</p>
+                    <p class="currentScoreNumber1" id="currentScorePlayer1">1</p>
                 </div>
                 <div class="footerButton">
                     <div class="buttonRollDiceDiv">
@@ -91,11 +91,12 @@
                         <button class="buttonHold buttonFont"><img class="ico" src="img/send.svg" alt="icon sending"> HOLD</button>
                     </div>  
                 </div>                  
-                <div class="currentPlayer2Div color">
+                <div class="currentPlayer2Div color" id="currentPlayer2Div">
                     <h2 class="currentScore2">Current</h2>
                     <p class="currentScoreNumber2">0</p>
                 </div>
             </div>           
-        </div>            
+        </div>        
+        <script src="script.js"></script>    
     </body>
 </html>
