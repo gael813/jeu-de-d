@@ -2,6 +2,14 @@ html {
     font-family: 'Lato', sans-serif;
     font-size: 1em;
 }
+body {
+    margin: 0;
+    background-image: url(img/Parquet-bois.jpg);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .color{
     background-color: #EA4D4C;
 }
@@ -30,7 +38,17 @@ html {
     text-align: center;
 }
 .wallpapperDiv {
+    background-color: #fff;
+    width: 90%;
+    height: 90%;
+}
+.divided {
+    position: fixed;
     background-color: lightgray;
+    left: 5%;
+    width: 45%;
+    height: 90%;
+    z-index: 1;
 }
 button {
     background-color: transparent;
@@ -39,6 +57,9 @@ button {
 .ico {
     vertical-align: middle;
     margin-right: 10px;
+}
+.fontPlayers {
+    font-size: 2.5rem;
 }
 .currentPlayer1Div {
     width: 200px;
@@ -62,14 +83,8 @@ button {
     font-size: 2.5em;
     margin: 0;
 }
-.buttonNewGame {
-    font-size: 1.5em;
-}
-.buttonRollDice {
-    font-size: 1.5em;
-}
-.buttonHold {
-    font-size: 1.5em;
+.buttonFont {
+    font-size: 2rem;
 }
 
 /*Display position*/
@@ -78,11 +93,19 @@ button {
     justify-content: center;
     padding-top: 3%;
     margin-bottom: 5%;
+    position: relative;
+    z-index: 1;
 }
 .players {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 5%;
+    margin: 0 auto 10%;
+    width: 75%;
+    position: relative;
+    z-index: 1;
+}
+.allDice {
+    margin: auto 0;
 }
 .buttonRollDiceDiv {
     display: flex;
@@ -93,6 +116,19 @@ button {
     display: flex;
     justify-content: center;
 }
+.footer {
+    display: flex;
+    justify-content: space-around;
+    width: 75%;
+    margin: 0 auto;
+    margin-bottom: 20%;
+    position: relative;
+    z-index: 1;
+}
+.buttonRollDiceDiv {
+    margin-bottom: 30%;
+}
+
 /*Dice générator*/
 .dice {  
     padding: 4px;  
@@ -115,7 +151,7 @@ button {
     align-items: center;
 }
 .second-face{
-    display: flex ;
+    display: none ;
     justify-content: space-between;
   }
   
@@ -124,7 +160,7 @@ button {
   }
   
   .third-face {
-    display: flex;
+    display: none;
     justify-content: space-between;
   }
   
@@ -137,8 +173,18 @@ button {
   }
   
   
-  .fourth-face , .sixth-face, .fifth-face{
-    display: flex;
+  .fourth-face{
+    display: none;
+    justify-content: space-between;
+  }
+
+  .sixth-face, .fifth-face{
+    display: none;
+    justify-content: space-between;
+  }
+
+  .fifth-face{
+    display: none;
     justify-content: space-between;
   }
   
