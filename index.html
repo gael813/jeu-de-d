@@ -15,27 +15,27 @@
             <div class="divided" id="divided">    
             </div>
             <div class="buttonNewGameDiv">                              
-                <button class="buttonNewGame buttonFont"><img class="ico" src="img/add.svg" alt="icon added">NEW GAME</button>
+                <button class="buttonNewGame buttonFont" id="buttonNewGame"><img class="ico" src="img/add.svg" alt="icon added">NEW GAME</button>
             </div>            
             <div class="players">
                 <div class="totalPlayer1Div">
                     <h1 class="totalPlayer1 fontPlayers">Player 1 <span class="dotSelectedPlayer1" id="dotSelectedPlayer1"> </span></h1>
-                    <p class="totalScoreNumber" id="totalScorePlayer1">0</p>
+                    <p class="totalScoreNumber" id="totalScorePlayer1">10</p>
                 </div>
                 <div class="allDice">
-                    <div class="dice first-face">
+                    <div class="dice first-face" id="firstDice">
                         <span class="dot color"> </span>
                     </div>
-                    <div class="dice second-face">
-                        <span class="dot color"> </span>
-                        <span class="dot color"> </span>
-                    </div>
-                    <div class="dice third-face">
-                        <span class="dot color"> </span>
+                    <div class="dice second-face" id="secondDice">
                         <span class="dot color"> </span>
                         <span class="dot color"> </span>
                     </div>
-                    <div class="dice fourth-face">
+                    <div class="dice third-face" id="thirdDice">
+                        <span class="dot color"> </span>
+                        <span class="dot color"> </span>
+                        <span class="dot color"> </span>
+                    </div>
+                    <div class="dice fourth-face" id="fourthDice">
                         <div class="column">
                             <span class="dot color"></span>
                             <span class="dot color"></span>
@@ -45,7 +45,7 @@
                             <span class="dot color"></span>
                           </div>
                     </div>
-                    <div class="dice fifth-face">
+                    <div class="dice fifth-face" id="fifthDice">
                         <div class="column">
                             <span class="dot color"></span>
                             <span class="dot color"></span>
@@ -60,7 +60,7 @@
                             <span class="dot color"></span>
                           </div>
                     </div>
-                    <div class="dice sixth-face">
+                    <div class="dice sixth-face" id="sixthDice">
                         <div class="column">
                             <span class="dot color"></span>
                             <span class="dot color"></span>
@@ -85,7 +85,7 @@
                 </div>
                 <div class="footerButton">
                     <div class="buttonRollDiceDiv">
-                        <button class="buttonRollDice buttonFont"><img class="ico" src="img/sync.svg" alt="icon synchronisation"> ROLL DICE</button>
+                        <button class="buttonRollDice buttonFont" id="buttonRollDice"><img class="ico" src="img/sync.svg" alt="icon synchronisation"> ROLL DICE</button>
                     </div>
                     <div class="buttonHoldDiv">
                         <button class="buttonHold buttonFont"><img class="ico" src="img/send.svg" alt="icon sending"> HOLD</button>
