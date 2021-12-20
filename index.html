@@ -8,6 +8,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" href="#">
         <title>Jeu de dé</title>
     </head>
     <body>
@@ -75,7 +76,7 @@
                 </div>
                 <div class="totalPlayer2Div">
                     <h1 class="totalPlayer2 fontPlayers">Player 2 <span class="dotSelectedPlayer2" id="dotSelectedPlayer2"> </span></h1>
-                    <p class="totalScoreNumber">0</p>
+                    <p class="totalScoreNumber" id="totalScorePlayer2">1</p>
                 </div>    
             </div>  
             <div class="footer">                              
@@ -89,7 +90,7 @@
                         <audio id="audio" src="img/roll.wav"></audio>
                     </div>
                     <div class="buttonHoldDiv">
-                        <button class="buttonHold buttonFont"><img class="ico" src="img/send.svg" alt="icon sending"> HOLD</button>
+                        <button class="buttonHold buttonFont" id="buttonHold"><img class="ico" src="img/send.svg" alt="icon sending"> HOLD</button>
                     </div>  
                 </div>                  
                 <div class="currentPlayer2Div color" id="currentPlayer2Div">
@@ -98,7 +99,7 @@
                 </div>
             </div>           
         </div>        
-
-        <script src="script.js"></script>    
+        <script src="function.js"></script>    
+        <script src="script.js"></script>
     </body>
 </html>
