@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,6 +22,8 @@
                 <div class="totalPlayer1Div">
                     <h1 class="totalPlayer1 fontPlayers">Player 1 <span class="dotSelectedPlayer1" id="dotSelectedPlayer1"> </span></h1>
                     <p class="totalScoreNumber" id="totalScorePlayer1">0</p>
+                    <h2 class="winnerPlayer1" id="winnerPlayer1">Winner !!!</h2>
+                    <h2 class="loserPlayer1" id="loserPlayer1">Loser !!!</h2>
                 </div>
                 <div class="allDice">
                     <div class="dice first-face" id="firstDice">
@@ -76,7 +78,9 @@
                 </div>
                 <div class="totalPlayer2Div">
                     <h1 class="totalPlayer2 fontPlayers">Player 2 <span class="dotSelectedPlayer2" id="dotSelectedPlayer2"> </span></h1>
-                    <p class="totalScoreNumber" id="totalScorePlayer2">1</p>
+                    <p class="totalScoreNumber" id="totalScorePlayer2">0</p>
+                    <h2 class="winnerPlayer2" id="winnerPlayer2">Winner !!!</h2>
+                    <h2 class="loserPlayer2" id="loserPlayer2">Loser !!!</h2>
                 </div>    
             </div>  
             <div class="footer">                              
@@ -85,11 +89,11 @@
                     <p class="currentScoreNumber1" id="currentScorePlayer1">0</p>
                 </div>
                 <div class="footerButton">
-                    <div class="buttonRollDiceDiv">
+                    <div class="buttonRollDiceDiv" id="buttonRollDiceDiv">
                         <button class="buttonRollDice buttonFont" id="buttonRollDice"><img class="ico" src="img/sync.svg" alt="icon synchronisation"> ROLL DICE</button>
                         <audio id="audio" src="img/roll.wav"></audio>
                     </div>
-                    <div class="buttonHoldDiv">
+                    <div class="buttonHoldDiv" id="buttonHoldDiv">
                         <button class="buttonHold buttonFont" id="buttonHold"><img class="ico" src="img/send.svg" alt="icon sending"> HOLD</button>
                     </div>  
                 </div>                  

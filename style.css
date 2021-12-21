@@ -2,6 +2,7 @@ html {
     font-family: 'Lato', sans-serif;
     font-size: 1em;
 }
+
 body {
     margin: 0;
     background-image: url(img/Parquet-bois.jpg);
@@ -11,9 +12,10 @@ body {
     justify-content: center;
 }
 
-.color{
+.color {
     background-color: #EA4D4C;
 }
+
 .dotSelectedPlayer1 {
     display: inline-block;
     width: 10px;
@@ -23,6 +25,7 @@ body {
     vertical-align: middle;
     margin-left: 0.5em;
 }
+
 .dotSelectedPlayer2 {
     display: inline-block;
     width: 10px;
@@ -32,66 +35,69 @@ body {
     vertical-align: middle;
     margin-left: 0.5em;
 }
+
 .totalScoreNumber {
     color: #EA4D4C;
     font-size: 3em;
     font-weight: bold;
     text-align: center;
 }
+
 .wallpapperDiv {
-    background-color: #fff;
+    background-color: #2c2f31;
     width: 90%;
     height: 90%;
+    min-height: 700px;
 }
-.divided {
-    position: fixed;
-    background-color: lightgray;
-    left: 5%;
-    width: 45%;
-    height: 90%;
-    z-index: 1;
-}
+
 button {
     background-color: transparent;
     border: unset;
 }
-.ico {
-    vertical-align: middle;
-    margin-right: 10px;
-}
+
 .fontPlayers {
     font-size: 2.5rem;
 }
+
 .currentPlayer1Div {
     width: 200px;
     height: 150px;
     text-align: center;
     display: inline-block;
     border-radius: 15px;
+    color: #fff;
 }
+
 .currentPlayer2Div {
     width: 200px;
     height: 150px;
     text-align: center;
     display: inline-block;
     border-radius: 15px;
+    color: #fff;
 }
+
 .currentScoreNumber1 {
-    color: #fff;
     font-size: 2.5em;
     margin: 0;
 }
+
 .currentScoreNumber2 {
-    color: #fff;
     font-size: 2.5em;
     margin: 0;
 }
+
 .buttonFont {
     font-size: 2rem;
+    color: #fff;
 }
+
+/*Animation*/
+
 .buttonNewGame:hover, .buttonRollDice:hover, .buttonHold:hover {
     cursor: pointer;
 }
+
 .buttonNewGame:hover, .buttonRollDice:hover, .buttonHold:hover {
     cursor: pointer;
     transition: transform .5s;
@@ -99,6 +105,60 @@ button {
 }
 
 /*Display position*/
+
+.divided {
+    position: fixed;
+    background-color: #3c3f41;
+    left: 5%;
+    width: 45%;
+    height: 90%;
+    min-height: 700px;
+    z-index: 1;
+}
+
+.winnerPlayer1 {
+    display: none;
+    position: absolute;
+    font-size: 6vw;
+    top: 50%;
+    left: 0;
+    color: #03cc03;
+}
+
+.loserPlayer1 {
+    display: none;
+    position: absolute;
+    font-size: 6vw;
+    top: 50%;
+    left: 0;
+    color: #a30000;
+}
+
+.winnerPlayer2 {
+    display: none;
+    position: absolute;
+    font-size: 6vw;
+    top: 50%;
+    right: 0;
+    color: #03cc03;
+}
+
+.loserPlayer2 {
+    display: none;
+    position: absolute;
+    font-size: 6vw;
+    top: 50%;
+    right: 0;
+    color: #a30000;
+}
+
+.ico {
+    position: relative;
+    bottom: 3.5px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
 .buttonNewGameDiv {
     display: flex;
     justify-content: center;
@@ -108,7 +168,6 @@ button {
     z-index: 1;
 }
 
-
 .players {
     display: flex;
     justify-content: space-around;
@@ -116,19 +175,26 @@ button {
     width: 75%;
     position: relative;
     z-index: 1;
+    color: #fff;
 }
+
 .allDice {
-    margin: auto 0;
+    position: absolute;
+    top: 50%;
+    margin: auto;  
 }
+
 .buttonRollDiceDiv {
     display: flex;
     justify-content: center;
     margin-bottom: 2%;
 }
+
 .buttonHoldDiv {
     display: flex;
     justify-content: center;
 }
+
 .footer {
     display: flex;
     justify-content: space-around;
@@ -138,6 +204,7 @@ button {
     position: relative;
     z-index: 1;
 }
+
 .buttonRollDiceDiv {
     margin-bottom: 30%;
 }
@@ -145,12 +212,13 @@ button {
 /*Dice générator*/
 .dice {  
     padding: 4px;  
-    background-color: #fff;  
+    background-color: #022936; 
     width: 80px;  
     height: 80px;  
     border-radius: 10%;
     box-shadow: 0px 0px 10px black;
 }
+
 .dot {
     display: block;
     width: 20px;
@@ -163,51 +231,51 @@ button {
     justify-content: center;
     align-items: center;
 }
+
 .second-face{
     display: none ;
     justify-content: space-between;
   }
   
-  .second-face .dot:nth-of-type(2) {
-    align-self: flex-end;
-  }
-  
-  .third-face {
-    display: none;
-    justify-content: space-between;
-  }
-  
-  .third-face .dot:nth-of-type(1) {
-    align-self :flex-end;
-  }
-  
-  .third-face .dot:nth-of-type(2) {
-    align-self :center;
-  }
-  
-  
-  .fourth-face{
-    display: none;
-    justify-content: space-between;
-  }
+.second-face .dot:nth-of-type(2) {
+align-self: flex-end;
+}
 
-  .sixth-face, .fifth-face{
-    display: none;
-    justify-content: space-between;
-  }
+.third-face {
+display: none;
+justify-content: space-between;
+}
 
-  .fifth-face{
-    display: none;
-    justify-content: space-between;
-  }
-  
-  .fourth-face .column , .sixth-face .column, .fifth-face .column{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  
-  .fifth-face .column:nth-of-type(2) {
-    justify-content: center;
-  }
+.third-face .dot:nth-of-type(1) {
+align-self :flex-end;
+}
+
+.third-face .dot:nth-of-type(2) {
+align-self :center;
+}
+
+.fourth-face {
+display: none;
+justify-content: space-between;
+}
+
+.sixth-face, .fifth-face {
+display: none;
+justify-content: space-between;
+}
+
+.fifth-face {
+display: none;
+justify-content: space-between;
+}
+
+.fourth-face .column , .sixth-face .column, .fifth-face .column {
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+justify-content: center;
+}
  

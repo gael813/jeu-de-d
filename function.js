@@ -18,12 +18,24 @@ function playerNull(getRandomInt)
             player = "player2";
         }
     }
+    getPlayersChoice(player);
 }
 
 // Reset to Game (newGame)
-function newGame() // A finir !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+function newGame()
 {
-    player1ScoreTotal.innerHTML = 0;
+    player1ScoreTotal.innerHTML       = 0;
+    player2ScoreTotal.innerHTML       = 0;
+    currentScorePlayer1.innerHTML     = 0;
+    currentScorePlayer2.innerHTML     = 0;
+    winnerPlayer1.style.display       = "none";
+    loserPlayer2.style.display        = "none";
+    winnerPlayer2.style.display       = "none";
+    loserPlayer1.style.display        = "none";
+    buttonHoldDiv.style.display       = "flex";
+    buttonRollDiceDiv.style.display   = "flex";
+    player                            = null;
+    playerNull(getRandomInt(2));
 }
 
 // Displayed the player's selection
@@ -31,33 +43,26 @@ function getPlayersChoice(player)
 {
     if (player == "player1")
     {
-        document.getElementById("dotSelectedPlayer2").style.display        = "none";
-        document.getElementById("dotSelectedPlayer1").style.display        = "inline-block";
-        document.getElementById("divided").style.left                      = "5%";
-        document.getElementById("currentPlayer2Div").style.backgroundColor = "grey";
-        document.getElementById("currentPlayer1Div").style.backgroundColor = "#991312";
+        dotSelectedPlayer2.style.display        = "none";
+        dotSelectedPlayer1.style.display        = "inline-block";
+        divided.style.left                      = "5%";
+        currentPlayer2Div.style.backgroundColor = "grey";
+        currentPlayer1Div.style.backgroundColor = "#991312";
     }
     else if (player == "player2")
     {
-        document.getElementById("dotSelectedPlayer1").style.display        = "none";
-        document.getElementById("dotSelectedPlayer2").style.display        = "inline-block";
-        document.getElementById("divided").style.left                      = "50%";
-        document.getElementById("currentPlayer1Div").style.backgroundColor = "grey";
-        document.getElementById("currentPlayer2Div").style.backgroundColor = "#991312";
+        dotSelectedPlayer1.style.display        = "none";
+        dotSelectedPlayer2.style.display        = "inline-block";
+        divided.style.left                      = "50%";
+        currentPlayer1Div.style.backgroundColor = "grey";
+        currentPlayer2Div.style.backgroundColor = "#991312";
     }
 }
 
 // Roll of the dice and sounds of dice
 function rollDice(getRandomInt) 
 {
-    let audio = document.getElementById("audio");
     audio.play();
-    let firstDice  = document.getElementById("firstDice");
-    let secondDice = document.getElementById("secondDice");
-    let thirdDice  = document.getElementById("thirdDice");
-    let fourthDice = document.getElementById("fourthDice");
-    let fifthDice  = document.getElementById("fifthDice");
-    let sixthDice  = document.getElementById("sixthDice");
     if (getRandomInt == 1)
     {
         firstDice.style.display  = "flex";
@@ -142,7 +147,7 @@ function rollDice(getRandomInt)
         }
         else if (player == "player2")
         {
-            value                         = currentScorePlayer1.innerText;
+            value                         = currentScorePlayer2.innerText;
             let parsed                    = parseInt(value);
             parsed                       += getRandomInt;
             currentScorePlayer2.innerHTML = parsed;
@@ -188,7 +193,7 @@ function rollDice(getRandomInt)
         }
         else if (player == "player2")
         {
-            value                         = currentScorePlayer1.innerText;
+            value                         = currentScorePlayer2.innerText;
             let parsed                    = parseInt(value);
             parsed                       += getRandomInt;
             currentScorePlayer2.innerHTML = parsed;
@@ -196,10 +201,12 @@ function rollDice(getRandomInt)
     }
 }
 
-// Returns current points in total points (Ajout du passage au player suivant lorsque 'Hold' A faire !!!!!!!!!!!!!!!!!!!!!!!!!!!!!)
+// Returns current points in total points)
 function totalReturns(player)
 {
-    let value = null;
+    let value  = null;
+    let value1 = null;
+    let value2 = null;
     if (player == "player1")
     {
         value1                      = currentScorePlayer1.innerText;
@@ -207,7 +214,7 @@ function totalReturns(player)
         value1                      = parseInt(value1);
         value2                      = parseInt(value2);
         value                       = value1 + value2;
-        player1ScoreTotal.innerHTML = value;        
+        player1ScoreTotal.innerHTML = value;
     }
     else if (player == "player2")
     {
@@ -216,6 +223,35 @@ function totalReturns(player)
         value1                      = parseInt(value1);
         value2                      = parseInt(value2);
         value                       = value1 + value2;
-        player2ScoreTotal.innerHTML = value;        
+        player2ScoreTotal.innerHTML = value;
     }
 }
+
+// Display Winner / Loser
+function winnerLoser(player1ScoreTotal, player2ScoreTotal)
+{  
+    let value1 = player1ScoreTotal.innerText;
+    value1     = parseInt(value1);
+    if (value1 >= 100)
+    {
+        winnerPlayer1.style.display     = "block";
+        loserPlayer2.style.display      = "block";
+        winnerPlayer2.style.display     = "none";
+        loserPlayer1.style.display      = "none"; 
+        buttonRollDiceDiv.style.display = "none";
+        buttonHoldDiv.style.display     = "none"; 
+    }
+
+    let value2 = player2ScoreTotal.innerText;
+    value2     = parseInt(value2);
+    if (value2 >= 100)
+    {
+        winnerPlayer2.style.display     = "block";
+        loserPlayer1.style.display      = "block";
+        winnerPlayer1.style.display     = "none";
+        loserPlayer2.style.display      = "none";
+        buttonRollDiceDiv.style.display = "none";
+        buttonHoldDiv.style.display     = "none";
+    }
+}
+
